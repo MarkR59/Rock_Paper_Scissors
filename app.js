@@ -59,38 +59,35 @@ function play(playerSelection, computerSelection){
         }
     }
 }
-
-function game(){
-    let playerWins = 0;
-    let computerWins = 0;
-    let ties = 0;
-    let on = true;
-
-    while (on){
-        let playerSelection = prompt("Choose your weapon");
+let pWins = 0;
+let cWins = 0;
+let buttons = document.querySelectorAll('button');
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        let playerSelection = btn.id;
         let computerSelection = getComputerChoice();
-
+        const pScore = document.querySelector('.playerScore');
+        const cScore = document.querySelector('.computerScore');
         let result = play(playerSelection, computerSelection);
-
         if (result == 1){
-            playerWins++;
+            pWins++;
+            pScore.textContent = pWins;
         }
-        else if (result == 0){
-            computerWins++;
+        if (result == 0){
+            cWins++;
+            cScore.textContent = cWins;
         }
-        else {
-            ties++;
+        if (pWins == 5 || cWins == 5){
+            if (pWins == 5){
+                console.log("Congratulations! You have won!");
+            }
+            else {
+                console.log("You lost! Try agian!");
+            }
+            pWins = 0;
+            cWins = 0;
+            pScore.textContent = pWins;
+            cScore.textContent = cWins;
         }
-
-        if (playerWins == 3){
-            on = false;
-            console.log("You Win! Congratulations!");
-        }
-        if (computerWins == 3){
-            on = false;
-            console.log("You Lose! Try Again!");
-        }
-    }
-}
-
-game();
+    });
+});        
