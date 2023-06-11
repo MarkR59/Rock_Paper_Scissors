@@ -61,13 +61,17 @@ function play(playerSelection, computerSelection){
 }
 let pWins = 0;
 let cWins = 0;
+let tieCount = 0;
 let buttons = document.querySelectorAll('button');
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         let playerSelection = btn.id;
         let computerSelection = getComputerChoice();
-        const pScore = document.querySelector('.playerScore');
-        const cScore = document.querySelector('.computerScore');
+        const pScore = document.querySelector('#pNum');
+        const cScore = document.querySelector('#cNum');
+        const tieScore = document.querySelector('#tieNum');
+        const message = document.querySelector('.Message');
+        message.textContent = null;
         let result = play(playerSelection, computerSelection);
         if (result == 1){
             pWins++;
@@ -77,17 +81,23 @@ buttons.forEach(btn => {
             cWins++;
             cScore.textContent = cWins;
         }
+        if (result == 2){
+            tieCount++;
+            tieScore.textContent = tieCount;
+        }
         if (pWins == 5 || cWins == 5){
             if (pWins == 5){
-                console.log("Congratulations! You have won!");
+               message.textContent = "Congratulations! You Won!";
             }
             else {
-                console.log("You lost! Try agian!");
+                message.textContent = "You Lost:( Try Again!";
             }
             pWins = 0;
             cWins = 0;
+            tieCount = 0;
             pScore.textContent = pWins;
             cScore.textContent = cWins;
+            tieScore.textContent = tieCount;
         }
     });
 });        

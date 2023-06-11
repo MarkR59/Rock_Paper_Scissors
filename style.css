@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color:rgb(255, 229, 180);
+}
+
+.Content {
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+}
+
+header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color:rgba(61,120,56,255);
+    text-align: center;
+}
+
+.title {
+    padding: 50px;
+}
+
+.GonRight {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    padding-right: 30px;
+    width: 325px;
+    height: 175px;
+}
+
+.GonLeft {
+    padding-right: 30px;
+    width: 325px;
+    height: 175px;
+}
+
+.Description {
+    margin: auto;
+    line-height: 1.6;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+}
+
+.buttonContainer {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    padding: 50px;
+}
+
+button {
+    border-radius: 30px;
+    border: none;
+    background-color: inherit;
+    margin: 20px;
+}
+
+#rock img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    padding: 0px;
+}
+
+#paper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    padding: 0px;
+}
+
+#scissors img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    padding: 0px;
+}
+
+.buttonContainer p {
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.Scores {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    font-size: large;
+}
+
+.Scores > * {
+    padding: 5px;
+}
+
+.playerScore > * {
+    display: inline-block;
+}
+
+.computerScore > * {
+    display: inline-block;
+}
+
+.tieScore > * {
+    display: inline-block;
+}
+
+.Message {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    font-size: 30px;
+    padding: 50px;
+}

@@ -5,21 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div id = "buttonContainer">
-        <button id = "rock">
-            Rock
-        </button>
-        <button id = "paper">
-            Paper
-        </button>
-        <button id = "scissors">
-            Scissors
-        </button>
+    <header>
+        <img src = "Images/Gon Header2.jpg" alt = "GonLeft" class = "GonLeft"/>
+        <h1 class = "title">
+            Jajanken
+        </h1>
+        <img src = "Images/Gon Header2.jpg" alt = "GonRight" class = "GonRight"/>
+    </header>
+    <div class = "Background">
+        <div class = "Content">
+            <p class = "Description">
+                Gon is in trouble and he needs your help! After learning that he is a Enhancement type 
+                of nen user, he has created a new technique, Jajanken. However, he has not yet mastered
+                it. You must guide him and determine which attack he should use. 
+            </p>
+            <div class = "buttonContainer">
+                <button id = "rock">
+                    <img src = "Images/Gon Rock.jpg" alt = "rock"/>
+                    <p>Rock</p>
+                </button>
+                <button id = "paper">
+                    <img src = "Images/Gon Paper.jpg" alt = "paper"/>
+                    <p>Paper</p>
+                </button>
+                <button id = "scissors">
+                    <img src = "Images/Gon Scissors.jpg" alt = "scissors"/>
+                    <p>Scissors</p>
+                </button>
+            </div>
+            <div class = "Scores">
+                <div class = "playerScore"> 
+                    <div>
+                        Player Score:
+                    </div>
+                    <div id = "pNum">
+                        0
+                    </div>
+                </div>
+                <div class = "computerScore">
+                    <div>
+                        Enemy Score:
+                    </div>
+                    <div id = "cNum">
+                        0
+                    </div>
+                </div>
+                <div class = "tieScore">
+                    <div>
+                        Ties:
+                    </div>
+                    <div id = "tieNum">
+                        0
+                    </div>
+                </div>
+            </div>
+            <div class = "Message">
+            </div>
+        </div>
     </div>
-    <div class = "playerScore">Player</div>
-    <div class = "computerScore">Computer</div>
 
     <script src="app.js"></script>
 </body>
